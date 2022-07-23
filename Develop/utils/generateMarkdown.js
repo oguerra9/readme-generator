@@ -1,10 +1,9 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  console.log(license);
   //choices: ['GNU AGPLv3','GNU GPLv3','Mozilla Public License 2.0','Apache License 2.0'],
   var badge = '';
-  if (license == null) {
+  if (license == null || license == 'Unlicensed') {
     badge = '';
   }
   else {
@@ -30,7 +29,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   var licenseLink = '';
-  if (license == null) {
+  if (license == null || license == 'Unlicensed') {
     licenseLink = '';
   }
   else {
@@ -57,8 +56,8 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   var licenseSection = '';
   var licenseNotice = '';
-  if (license == null) {
-    licenseSection = '';
+  if (license == null || license == 'Unlicensed') {
+    licenseSection = 'Unlicensed';
   }
   else {
     switch (license) {
