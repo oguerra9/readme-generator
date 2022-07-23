@@ -13,11 +13,7 @@ After installing the necessary packages, the user must run the project in node. 
 
 ![screenshot of app's function](Develop/assets/screenshot-1.png)
 ![screenshot of app's function](Develop/assets/screenshot-2.png)
-<<<<<<< HEAD
 [Video Demo of App](https://drive.google.com/file/d/19K3-rl0I1NrLF1v2HUSWkpKVYffDG5s5/view)
-=======
-[readme-generator-demo.webm](https://user-images.githubusercontent.com/102640672/180622722-bf1a2e1d-5c4d-4f7c-bb43-85ac25ee1cdc.webm)
->>>>>>> 559e9a7b5a41cae5953728a1b3c2e387924def5e
 
   
 ## Contact
