@@ -39,7 +39,7 @@ const promptUser = () => {
         {
             type: 'list',
             message: 'What kind of license would you like to use for your project?',
-            choices: ['GNU AGPLv3','GNU GPLv3','Mozilla Public License 2.0','Apache License 2.0','MIT License'],
+            choices: ['GNU AGPLv3','GNU GPLv3','Mozilla Public License 2.0','Apache License 2.0'],
             name: 'licenseChoice',
         },
         {
@@ -75,7 +75,11 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     promptUser()
-        .then ((data) => writeToFile('README.md',genMarkdown.generateMarkdown(data)))
+        //.then ((data) => console.log(data))
+        .then ((data) => {
+            writeToFile('READMETEST.md',genMarkdown.generateMarkdown(data))
+            console.log(data)
+        })
 };
 
 // Function call to initialize app
