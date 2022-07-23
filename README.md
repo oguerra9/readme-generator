@@ -14,6 +14,7 @@ After installing the necessary packages, the user must run the project in node. 
 ![screenshot of app's function](Develop/assets/screenshot-1.png)
 ![screenshot of app's function](Develop/assets/screenshot-2.png)
 ![video demo of app](Develop/assets/readme-generator-demo.webm)
+Alternative link to video demo of app: ![README Generator Demo Video](https://drive.google.com/file/d/1sDfKfwi-Gx1EaFcjzECoGttaNnGuav8U/view)
 
   
 ## Contact
