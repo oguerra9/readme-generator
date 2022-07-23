@@ -26,11 +26,6 @@ const promptUser = () => {
             message: 'Provide instructions for using your project: ',
             name: 'usageIns',
         },
-        // {
-        //     type: 'input',
-        //     message: 'Enter the relative pathway to any screenshot images you would like to include.',
-        //     name: 'imgPath',
-        // },
         {
             type: 'input',
             message: 'Enter any guidelines necessary for any developers who may want to contribute to your project: ',
@@ -58,11 +53,6 @@ const promptUser = () => {
             name: 'email',
         }
     ])
-    // .then ((response) => {
-    //     fs.writeFile('log.txt', JSON.stringify(response), (err) => err ? console.log(err) : console.log("Saved Successfully!"))
-    //     console.log(response)
-    // });
-    //.then((data) => writeToFile('README.md',generateMarkdown.generateMarkdown(data)))
 };
 
 
@@ -75,10 +65,8 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     promptUser()
-        //.then ((data) => console.log(data))
         .then ((data) => {
-            writeToFile('READMETEST.md',genMarkdown.generateMarkdown(data))
-            console.log(data)
+            writeToFile('README.md',genMarkdown.generateMarkdown(data))
         })
 };
 

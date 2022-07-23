@@ -99,8 +99,8 @@ function generateMarkdown(data) {
   ${data.installation}
   
   ## Usage
-  ${data.usageIns}
-  
+  ${data.usageIns} <br>
+
   ## Contributing
   ${data.contributing}
   
@@ -108,7 +108,7 @@ function generateMarkdown(data) {
   ${data.testEx}
   
   ## Questions
-  For any further questions, you can reach me at ${data.email}. <br>
+  For any further questions, please contact me at ${data.email}. <br>
   GitHub: ${data.gitUser}
   
   ## License
