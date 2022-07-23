@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const genMarkdown = require('./generateMarkdown');
+const genMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const promptUser = () => {
@@ -25,21 +25,6 @@ const promptUser = () => {
             type: 'input',
             message: 'Provide instructions for using your project: ',
             name: 'usageIns',
-        },
-        {
-            type: 'input',
-            message: 'Did anyone else contribute to this project? If so',
-            name: 'whatLearn',
-        },
-        {
-            type: 'input',
-            message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
-            name: 'installSteps',
-        },
-        {
-            type: 'input',
-            message: 'Provide instructions and examples for use.', 
-            name: 'usageInstruct',
         },
         // {
         //     type: 'input',
@@ -66,21 +51,32 @@ const promptUser = () => {
             type: 'input',
             message: 'What is your GitHub username?',
             name: 'gitUser',
+        },
+        {
+            type: 'input',
+            message: 'What is your email?',
+            name: 'email',
         }
     ])
-    .then((data) =>
-        writeToFile('README.md',generateMarkdown.generateMarkdown(data))
-    );
+    // .then ((response) => {
+    //     fs.writeFile('log.txt', JSON.stringify(response), (err) => err ? console.log(err) : console.log("Saved Successfully!"))
+    //     console.log(response)
+    // });
+    //.then((data) => writeToFile('README.md',generateMarkdown.generateMarkdown(data)))
 };
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(filename, data, (err) =>
+    fs.writeFile(fileName, data, (err) =>
     err ? console.log(err) : console.log('README file created successfully'))
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    promptUser()
+        .then ((data) => writeToFile('README.md',genMarkdown.generateMarkdown(data)))
+};
 
 // Function call to initialize app
 init();
